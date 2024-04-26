@@ -18,6 +18,20 @@ import Foundation
     - A String `firstName`
     - A String `lastName`
     - a String `avatar`
+
  
  2.3 Create a separate structure called `UserResponse` that also conforms to `Codable` and contains a single `[User]` called data.
  */
+
+struct User: Codable {
+    var id: Int
+    var email: String
+    var firstName: String
+    var lastName: String
+    var avatar: String
+   
+}
+
+struct UserResponse: Codable {
+    var data : [User]
+}
